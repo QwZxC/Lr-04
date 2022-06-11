@@ -35,7 +35,7 @@ def analysis(dict1):
             if len(result[f'({dict1[key1]}, {key1})']) == 0:
                 del result[f'({dict1[key1]}, {key1})']
             else:
-                yield f'({dict1[key1]}, {key1})', result[f'({dict1[key1]}, {key1})']
+                yield f'({dict1[key1]}, {os.path.basename(key1)})', result[f'({dict1[key1]}, {key1})']
 
 
 def duplicate(result):
